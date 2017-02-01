@@ -9,6 +9,7 @@ Plug 'tpope/vim-vividchalk'
 
 " General
 Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'benmills/vimux'
 Plug 'bling/vim-airline'
 Plug 'ecomba/vim-ruby-refactoring'
 Plug 'epmatsw/ag.vim'
@@ -17,17 +18,17 @@ Plug 'henrik/vim-qargs'
 Plug 'isRuslan/vim-es6'
 Plug 'junegunn/vim-easy-align'
 Plug 'juvenn/mustache'
+Plug 'kana/vim-textobj-user'
 Plug 'kien/ctrlp.vim'
 Plug 'lepture/vim-jinja'
 Plug 'matt-royal/diffthese'
-Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'nono/vim-handlebars'
 Plug 'pangloss/vim-javascript'
-Plug 'benmills/vimux'
 Plug 'pgr0ss/vimux-ruby-test'
 Plug 'saltstack/salt-vim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-fugitive'
@@ -37,8 +38,8 @@ Plug 'vim-scripts/EnhancedJumps'
 Plug 'whatyouhide/vim-gotham'
 Plug 'yssl/QFEnter'
 
-" On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Language specific
 Plug 'tpope/vim-haml', { 'for': 'haml' }
