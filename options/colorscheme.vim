@@ -1,6 +1,6 @@
 set background=dark
-colorscheme gotham256
+colorscheme Tomorrow-Night
 
 if !has("gui_running")
-  colorscheme gotham256
+  colorscheme Tomorrow-Night
 end
