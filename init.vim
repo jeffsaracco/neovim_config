@@ -38,15 +38,22 @@ Plug 'vim-scripts/EnhancedJumps'
 Plug 'whatyouhide/vim-gotham'
 Plug 'yssl/QFEnter'
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
 " Language specific
 Plug 'tpope/vim-haml', { 'for': 'haml' }
 Plug 'Casecommons/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-endwise', { 'for': 'ruby' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'jgdavey/vim-blockle', { 'for': 'ruby' }
+
+
+" Searching
+Plug 'tpope/vim-abolish'
+Plug 'henrik/vim-qargs'
+Plug 'kien/ctrlp.vim'
+
+Plug 'jremmen/vim-ripgrep'
+Plug 'google/vim-searchindex'
+Plug 'nixprime/cpsm', { 'do': 'env PY3=OFF ./install.sh' }
 
 " Initialize plugin system
 call plug#end()
