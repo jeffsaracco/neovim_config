@@ -1,74 +1,110 @@
-" Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
-call plug#begin('~/.local/share/nvim/plugged')
+" ----------
+" Vim Config
+" ----------
+"
+"
+" How this works:
+"
+" This file is minimal.  Most of the vim settings and initialization is in
+" several files in .vim/init.  This makes it easier to find things and to
+" merge between branches and repos.
+"
+" Please do not add configuration to this file, unless it *really* needs to
+" come first or last, like Vundle and sourcing the machine-local config.
+" Instead, add it to one of the files in .vim/init, or create a new one.
 
-" Colors
-Plug 'altercation/vim-colors-solarized'
-Plug 'chriskempson/vim-tomorrow-theme'
-Plug 'ervandew/supertab'
-Plug 'tpope/vim-vividchalk'
+set nocompatible               " be iMproved
+filetype off                   " required!
 
-" General
-Plug 'FelikZ/ctrlp-py-matcher'
-Plug 'benmills/vimux'
-Plug 'bling/vim-airline'
-Plug 'ecomba/vim-ruby-refactoring'
-Plug 'epmatsw/ag.vim'
-Plug 'groenewege/vim-less'
-Plug 'henrik/vim-qargs'
-Plug 'isRuslan/vim-es6'
-Plug 'junegunn/vim-easy-align'
-Plug 'juvenn/mustache'
-Plug 'kana/vim-textobj-user'
-Plug 'kien/ctrlp.vim'
-Plug 'lepture/vim-jinja'
-Plug 'matt-royal/diffthese'
-Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'nono/vim-handlebars'
-Plug 'pangloss/vim-javascript'
-Plug 'pgr0ss/vimux-ruby-test'
-Plug 'saltstack/salt-vim'
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'vim-scripts/EnhancedJumps'
-Plug 'whatyouhide/vim-gotham'
-Plug 'yssl/QFEnter'
+let need_to_install_plugins=0
+if empty(system("grep lazy_load ~/.vim/bundle/Vundle.vim/autoload/vundle.vim"))
+  echoerr "Vundle plugins are not installed. Please run ~/.vim/bin/install"
+else
+  set rtp+=~/.vim/bundle/Vundle.vim
 
-" Language specific
-Plug 'tpope/vim-haml', { 'for': 'haml' }
-Plug 'Casecommons/vim-rails', { 'for': 'ruby' }
-Plug 'tpope/vim-endwise', { 'for': 'ruby' }
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-Plug 'jgdavey/vim-blockle', { 'for': 'ruby' }
+  call vundle#begin()
 
+  Plugin 'VundleVim/Vundle.vim'
 
-" Searching
-Plug 'tpope/vim-abolish'
-Plug 'henrik/vim-qargs'
-Plug 'kien/ctrlp.vim'
+  "
+  " Colorschemes
+  "
+  Plugin 'chriskempson/vim-tomorrow-theme'
 
-Plug 'jremmen/vim-ripgrep'
-Plug 'google/vim-searchindex'
-Plug 'nixprime/cpsm', { 'do': 'env PY3=OFF ./install.sh' }
+  "
+  " Ruby / Rails
+  "
+  Plugin 'vim-ruby/vim-ruby'
+  Plugin 'tpope/vim-rails'
+  Plugin 'tpope/vim-endwise'
+  Plugin 'ecomba/vim-ruby-refactoring'
+  Plugin 'tpope/vim-rake'
+  Plugin 'benmills/vimux'
+  Plugin 'janko-m/vim-test'
 
-" Initialize plugin system
-call plug#end()
+  "
+  " General Editing
+  "
+  Plugin 'tpope/vim-repeat'
+  Plugin 'tpope/vim-surround'
+  Plugin 'scrooloose/nerdcommenter'
+  Plugin 'tpope/vim-unimpaired'
+  " Plugin 'scrooloose/syntastic'
+  Plugin 'itchyny/lightline.vim'
+  Plugin 'matt-royal/diffthese'
+  Plugin 'regreplop.vim' " This is for ctrl-K replacing
+  Plugin 'Peeja/vim-cdo'
+  Plugin 'tpope/vim-projectionist' " this is for :AV
+  Plugin 'MarcWeber/vim-addon-mw-utils'
 
-" Source initialization files
-runtime! options/**.vim
+  "
+  " Searching
+  "
+  Plugin 'tpope/vim-abolish'
+  Plugin 'henrik/vim-qargs'
+  Plugin 'kien/ctrlp.vim'
+  Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plugin 'junegunn/fzf.vim'
 
-let g:S = 0  "result in global variable S
-function! Sum(number)
-  let g:S = g:S + a:number
-  return a:number
-endfunction
+  Plugin 'jremmen/vim-ripgrep'
+  Plugin 'google/vim-searchindex'
+  Plugin 'nixprime/cpsm', { 'do': 'env PY3=OFF ./install.sh' }
 
-set clipboard=unnamed
-set fillchars=diff:·
+  "
+  " Navigation
+  "
+  Plugin 'scrooloose/nerdtree'
 
-" Machine-local vim settings - keep this at the end
-silent! source ~/.vimrc.local
+  "
+  " Languages
+  "
+  Plugin 'pangloss/vim-javascript'
+  Plugin 'plasticboy/vim-markdown'
+  Plugin 'nono/vim-handlebars'
+  Plugin 'kchmck/vim-coffee-script'
+  Plugin 'juvenn/mustache.vim'
+  Plugin 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+  Plugin 'elzr/vim-json'
+
+  "
+  " Development Tool Integration
+  "
+  Plugin 'tpope/vim-fugitive'
+  Plugin 'tpope/vim-rhubarb'
+  Plugin 'airblade/vim-gitgutter'
+  Plugin 'pivotal/tmux-config'
+  Plugin 'sjl/vitality.vim'
+  Plugin 'tmux-plugins/vim-tmux-focus-events'
+
+  call vundle#end()
+
+  filetype plugin indent on
+
+  syntax on
+
+  runtime! init/**.vim
+
+  if filereadable($HOME . "/.vimrc.local")
+    source ~/.vimrc.local
+  endif
+endif
