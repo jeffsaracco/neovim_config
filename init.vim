@@ -69,9 +69,10 @@ else
   "
   Plugin 'tpope/vim-abolish'
   Plugin 'henrik/vim-qargs'
-  Plugin 'kien/ctrlp.vim'
+  " Plugin 'kien/ctrlp.vim'
   Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plugin 'junegunn/fzf.vim'
+  Plugin 'tweekmonster/fzf-filemru'
 
   Plugin 'jremmen/vim-ripgrep'
   Plugin 'google/vim-searchindex'
