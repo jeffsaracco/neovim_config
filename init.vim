@@ -41,14 +41,6 @@ else
   Plugin 'tpope/vim-rake'
   Plugin 'benmills/vimux'
   Plugin 'janko-m/vim-test'
-  if has('nvim')
-    Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  else
-    Plugin 'Shougo/deoplete.nvim'
-    Plugin 'roxma/nvim-yarp'
-    Plugin 'roxma/vim-hug-neovim-rpc'
-  endif
-
   "
   " General Editing
   "
