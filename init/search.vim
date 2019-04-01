@@ -13,7 +13,7 @@ set ignorecase
 " FZF
 map <leader>F   :FZF<CR>
 map <leader>f   :FZF<CR>
-nnoremap <c-p> :FilesMru --tiebreak=end<cr>
+nnoremap <c-p> :FZFMru<CR>
 
 " An action can be a reference to a function that processes selected lines
 function! s:build_quickfix_list(lines)

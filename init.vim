@@ -72,7 +72,7 @@ else
   " Plugin 'kien/ctrlp.vim'
   Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plugin 'junegunn/fzf.vim'
-  Plugin 'tweekmonster/fzf-filemru'
+  Plugin 'pbogut/fzf-mru.vim'
 
   Plugin 'jremmen/vim-ripgrep'
   Plugin 'google/vim-searchindex'
