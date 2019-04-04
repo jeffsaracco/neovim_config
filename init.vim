@@ -85,6 +85,7 @@ else
   Plugin 'juvenn/mustache.vim'
   Plugin 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plugin 'elzr/vim-json'
+  Plugin 'neoclide/coc.nvim', {'do': ':call coc#util#install()'}
 
   "
   " Development Tool Integration
