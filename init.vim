@@ -55,6 +55,7 @@ else
   Plugin 'Peeja/vim-cdo'
   Plugin 'tpope/vim-projectionist' " this is for :AV
   Plugin 'MarcWeber/vim-addon-mw-utils'
+  Plugin 'stefandtw/quickfix-reflector.vim'
 
   "
   " Searching
