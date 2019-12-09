@@ -29,7 +29,7 @@ set wildignore+=public/images/**   " ...Also images.
 set wildignore+=vendor/**          " ...Also vendor.
 
 set list                        " Show whitespace
-set listchars=trail:·
+set listchars=trail:·,tab:▸\
 
 set showmatch                   " Show matching brackets
 set hidden                      " Allow hidden, unsaved buffers
@@ -60,3 +60,5 @@ au FocusGained,BufEnter * :checktime
 set lazyredraw
 set nocursorline
 set ttyfast
+
+set foldmethod=manual
