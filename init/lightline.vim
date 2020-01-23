@@ -22,7 +22,7 @@ let g:lightline.component_type = {
 let g:lightline.active = {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ],
-      \             [ 'readonly', 'filename', 'modified' ] ],
+      \             [ 'readonly', 'relativepath', 'modified' ] ],
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
       \              [ 'fileformat', 'fileencoding', 'filetype' ],
