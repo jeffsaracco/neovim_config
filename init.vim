@@ -53,7 +53,7 @@ Plug 'thinca/vim-textobj-between', { 'for': ['ruby'] }
 "
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdcommenter'
+Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-unimpaired'
 Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
