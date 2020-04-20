@@ -31,22 +31,22 @@ Plug 'chriskempson/vim-tomorrow-theme'
 "
 " Ruby / Rails
 "
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-endwise'
-Plug 'ecomba/vim-ruby-refactoring'
-Plug 'tpope/vim-rake'
-Plug 'benmills/vimux'
-Plug 'janko-m/vim-test'
+Plug 'vim-ruby/vim-ruby', { 'for': ['ruby'] }
+Plug 'tpope/vim-rails', { 'for': ['ruby'] }
+Plug 'tpope/vim-endwise', { 'for': ['ruby'] }
+Plug 'ecomba/vim-ruby-refactoring', { 'for': ['ruby'] }
+Plug 'tpope/vim-rake', { 'for': ['ruby'] }
+Plug 'benmills/vimux', { 'for': ['ruby'] }
+Plug 'janko-m/vim-test', { 'for': ['ruby'] }
 
 "
 " Text Objects
 "
-Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'kana/vim-textobj-user'
-Plug 'Julian/vim-textobj-variable-segment'
-Plug 'kana/vim-textobj-line'
-Plug 'thinca/vim-textobj-between'
+Plug 'nelstrom/vim-textobj-rubyblock', { 'for': ['ruby'] }
+Plug 'kana/vim-textobj-user', { 'for': ['ruby'] }
+Plug 'Julian/vim-textobj-variable-segment', { 'for': ['ruby'] }
+Plug 'kana/vim-textobj-line', { 'for': ['ruby'] }
+Plug 'thinca/vim-textobj-between', { 'for': ['ruby'] }
 
 "
 " General Editing
@@ -78,14 +78,14 @@ Plug 'google/vim-searchindex'
 "
 " Navigation
 "
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeFind', 'NERDTreeClose', 'NERDTreeToggle', 'NERDTreeRefreshRoot'] }
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': ['NERDTreeFind', 'NERDTreeClose', 'NERDTreeToggle', 'NERDTreeRefreshRoot'] }
 
 "
 " Languages
 "
 Plug 'juvenn/mustache.vim'
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': ['go'] }
 Plug 'sheerun/vim-polyglot'
 
 Plug 'dense-analysis/ale'
