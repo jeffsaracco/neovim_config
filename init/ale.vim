@@ -8,7 +8,7 @@ let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier', 'eslint'],
 \   'vim': [ 'remove_trailing_lines', 'trim_whitespace' ],
-\   'go': ['gofmt', 'gopls'],
+\   'go': ['gofmt', 'goimports'],
 \   'ruby': ['remove_trailing_lines', 'rubocop', 'trim_whitespace'],
 \}
 
