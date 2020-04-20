@@ -13,16 +13,22 @@
 " come first or last, like Vundle and sourcing the machine-local config.
 " Instead, add it to one of the files in .vim/init, or create a new one.
 
-set nocompatible               " be iMproved
+" set nocompatible               " be iMproved
+let g:loaded_netrw       = 1
+let g:loaded_netrwPlugin = 1
+filetype off
 
-if empty(glob('~/.config/.nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/.nvim/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
+augroup vimrc
+  if empty(glob('~/.config/.nvim/autoload/plug.vim'))
+    silent !curl -fLo ~/.config/.nvim/autoload/plug.vim --create-dirs
+          \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  endif
+augroup END
 
 call plug#begin('~/.config/.nvim/plugged')
 
+Plug 'tweekmonster/startuptime.vim'
 "
 " Colorschemes
 "
@@ -54,7 +60,6 @@ Plug 'thinca/vim-textobj-between', { 'for': ['ruby'] }
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdcommenter'
-Plug 'tpope/vim-unimpaired'
 Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
 Plug 'matt-royal/diffthese'
@@ -103,7 +108,7 @@ endif
 Plug 'itchyny/vim-gitbranch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb' "GitHub extension for fugitive
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 call plug#end()
 
@@ -111,6 +116,8 @@ syntax on
 
 runtime! init/**.vim
 
-if filereadable($HOME . "/.vimrc.local")
+if filereadable($HOME . '/.vimrc.local')
   source ~/.vimrc.local
 endif
+
+filetype on
