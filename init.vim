@@ -28,11 +28,11 @@ augroup END
 
 call plug#begin('~/.config/.nvim/plugged')
 
-Plug 'tweekmonster/startuptime.vim'
+Plug 'tweekmonster/startuptime.vim', { 'on': ['StartupTime'] }
 "
 " Colorschemes
 "
-Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'chriskempson/base16-vim'
 
 "
 " Ruby / Rails
