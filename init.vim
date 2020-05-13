@@ -13,9 +13,7 @@
 " come first or last, like Vundle and sourcing the machine-local config.
 " Instead, add it to one of the files in .vim/init, or create a new one.
 
-" set nocompatible               " be iMproved
-let g:loaded_netrw       = 1
-let g:loaded_netrwPlugin = 1
+set nocompatible               " be iMproved
 filetype off
 
 augroup vimrc
