@@ -30,7 +30,7 @@ Plug 'tweekmonster/startuptime.vim', { 'on': ['StartupTime'] }
 "
 " Colorschemes
 "
-Plug 'chriskempson/base16-vim'
+Plug 'cocopon/iceberg.vim'
 
 "
 " Ruby / Rails
