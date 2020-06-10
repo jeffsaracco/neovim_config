@@ -31,6 +31,10 @@ Plug 'tweekmonster/startuptime.vim', { 'on': ['StartupTime'] }
 " Colorschemes
 "
 Plug 'cocopon/iceberg.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'morhetz/gruvbox'
+Plug 'rakr/vim-one'
 
 "
 " Ruby / Rails
